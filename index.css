@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Space+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container #head {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700px;
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: -0.08em;
+    color: #333333;
+    margin: 40px 0 0 40px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.image {
+
+    display: flex;
+    justify-content: center;
+    margin-right: 8vw;
+    padding-top: 9vh;
+    animation: leftimg .5s linear;
+}
+@keyframes leftimg {
+    0%{
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.image img {
+
+    width: 40vw;
+animation: img 2s linear infinite;
+}
+@keyframes img {
+    0%{
+
+    }
+    50%{
+transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.content {
+    padding-top: 10vh;
+    animation: rightcontent .5s linear;
+}
+@keyframes rightcontent {
+    0%{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.container .content h1 {
+    font-family: 'Space Mono', monospace;
+   
+    font-size: 64px;
+    line-height: 65px;
+    letter-spacing: -0.035em;
+    margin: 0;
+}
+
+.container .content p {
+    font-family: 'Space Mono', monospace;
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.035em;
+    color: #4F4F4F;
+}
+
+button {
+    font-family: 'Space Mono';
+    width: 200px;
+    height: 60px;
+   
+   
+    background: #333333;
+    margin-top: 40px;
+    border: none;
+    text-transform: uppercase;
+    color: aliceblue;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+button:hover {
+    background-color: rgb(114, 32, 255);
+    letter-spacing: 1px;
+}
+#footer{
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+}
+
+
+@media only screen and (max-width: 912px) {
+    .details {
+
+        grid-template-columns: auto;
+    }
+
+    .image {
+
+
+        margin-right: 0px;
+        margin-top: 40px;
+    }
+
+    .image img {
+        width: 60vw;
+    }
+    .content{
+       
+        height: 60vh;
+    }
+  #footer{
+    top: 110vh;
+    padding-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width:575px) {
+
+    .image {
+
+
+        margin-right: 0px;
+       
+    }
+
+    .image img {
+        width: 60vw;
+        margin-top: 10%;
+    }
+
+    .container #head {
+        font-size: 5vw;
+        margin: 30px;
+
+    }
+    .content{
+        padding: 20px;
+        margin-top: 10%;
+    }
+    .details .content h1 {
+       
+        font-weight: 0;
+        font-size: 12vw;
+        line-height: 71px;
+        letter-spacing: 0em;
+    }
+
+    .details .content p {
+        font-size: 5vw;
+        margin-top: 50px;
+        line-height: 27px;
+    }
+
+    button {
+        margin-top: 5vh;
+    }
+
+    #footer{
+        font-size: 3vw;
+        top: 120vh;
+        padding-bottom: 30px;
+    }
+}
